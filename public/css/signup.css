@@ -1,0 +1,70 @@
+.divider {
+    margin: 20px 0;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #666;
+    position: relative;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 40%;
+    height: 1px;
+    background: #ddd;
+}
+
+.divider::before {
+    left: 0;
+}
+
+.divider::after {
+    right: 0;
+}
+
+.social-login {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.social-btn .icon {
+    font-size: 1.1rem;
+}
+
+.social-btn.google {
+    background: #fff;
+    border: 1px solid #ddd;
+    color: #333;
+}
+
+.social-btn.google:hover {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.social-btn.facebook {
+    background: #1877f2;
+    color: #fff;
+}
+
+.social-btn.facebook:hover {
+    background: #145dc9;
+    transform: translateY(-2px);
+}
