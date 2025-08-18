@@ -12,7 +12,7 @@ export default function Home() {
           <h1 className="logo-shala">Shala</h1>
         </div>
         <ul className="nav-links">
-          <Link href="/"><li>Home</li></Link>
+          <Link href="/"><li id='index'>Home</li></Link>
           <Link href="/explore"><li>Explore</li></Link>
           <li><a href="#">Contact</a></li>
         </ul>

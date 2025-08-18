@@ -173,3 +173,7 @@ nav {
     display: flex;
     justify-content: flex-end;
 }
+
+.nav-links a #index {
+    color: #1565C0;
+}
