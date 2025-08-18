@@ -5,8 +5,21 @@ import '../../public/css/explore.css';
 
 export default function ExplorePage() {
   return (
-      <>
-          
-      </>
+    <>
+      <nav>
+        <div className="logo">
+          <h1 className="logo-text">edu</h1>
+          <h1 className="logo-shala">Shala</h1>
+        </div>
+        <ul className="nav-links">
+          <Link href="/"><li>Home</li></Link>
+          <Link href="/explore"><li>Explore</li></Link>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <Link href="/login">
+          <button className="login-btn">Login</button>
+        </Link>
+      </nav>
+    </>
   );
 }
