@@ -20,7 +20,6 @@ export default function Explore() {
 
   return (
     <>
-      {/* NAVBAR */}
       <nav>
         <div className="logo">
           <h1 className="logo-text">edu</h1>
@@ -37,7 +36,6 @@ export default function Explore() {
         </Link>
       </nav>
 
-      {/* HERO SECTION */}
       <section className="explore-hero">
         <h1>Find Your Dream College 🎓</h1>
         <p>Browse thousands of colleges, compare courses & apply with ease.</p>
@@ -52,7 +50,6 @@ export default function Explore() {
         </div>
       </section>
 
-      {/* COLLEGES GRID */}
       <section className="college-grid">
         {filteredColleges.length > 0 ? (
           filteredColleges.map((college) => (

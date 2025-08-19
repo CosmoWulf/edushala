@@ -74,7 +74,6 @@ nav {
     transform: scaleX(1);
 }
 
-/* Login Button */
 .login-btn {
     background: #1E88E5;
     border: none;
@@ -113,7 +112,6 @@ nav {
     margin-bottom: 2rem;
 }
 
-/* SEARCH BAR */
 .search-bar {
     display: flex;
     justify-content: center;
@@ -149,14 +147,11 @@ nav {
 .college-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    /* fix */
     gap: 2rem;
     padding: 3rem 2rem;
     background: #f9f9f9;
     max-width: 1200px;
-    /* ✅ grid max width fix */
     margin: 0 auto;
-    /* ✅ center align fix */
 }
 
 .college-card {
@@ -167,9 +162,7 @@ nav {
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     max-width: 320px;
-    /* ✅ card ki width limit fix */
     margin: 0 auto;
-    /* ✅ prevent full stretch */
 }
 .college-card:hover {
     transform: translateY(-8px);
@@ -208,3 +201,4 @@ nav {
 .img-colleges {
     border-radius: 12px;
 }
+
