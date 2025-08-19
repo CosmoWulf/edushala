@@ -20,6 +20,7 @@ export default function Explore() {
 
   return (
     <>
+      {/* NAVBAR */}
       <nav>
         <div className="logo">
           <h1 className="logo-text">edu</h1>
@@ -36,6 +37,7 @@ export default function Explore() {
         </Link>
       </nav>
 
+      {/* HERO SECTION */}
       <section className="explore-hero">
         <h1>Find Your Dream College 🎓</h1>
         <p>Browse thousands of colleges, compare courses & apply with ease.</p>
@@ -50,13 +52,19 @@ export default function Explore() {
         </div>
       </section>
 
-      {/* COLLAGE'S InFo */}
+      {/* COLLEGES GRID */}
       <section className="college-grid">
         {filteredColleges.length > 0 ? (
           filteredColleges.map((college) => (
             <div key={college.id} className="college-card">
               {college.img ? (
-                <Image className='img-colleges' src={college.img} alt={college.name} width={280} height={160} />
+                <Image
+                  className="img-colleges"
+                  src={college.img}
+                  alt={college.name}
+                  width={280}
+                  height={160}
+                />
               ) : (
                 <div className="placeholder">No Image</div>
               )}
