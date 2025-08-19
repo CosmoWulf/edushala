@@ -96,8 +96,8 @@ nav {
 
 .explore-hero {
     text-align: center;
-    padding: 5rem 2rem 3rem;
-    background: #000;
+    padding: 10rem 2rem 3rem;
+    background: transparent;
     color: #fff;
 }
 
@@ -123,6 +123,7 @@ nav {
 .search-bar input {
     padding: 12px 18px;
     width: 320px;
+    color: #000;
     border: none;
     border-radius: 30px;
     font-size: 1rem;
@@ -194,4 +195,8 @@ nav {
     grid-column: 1/-1;
     text-align: center;
     color: #666;
+}
+
+.img-colleges {
+    border-radius: 12px;
 }
