@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "EduShala | Ruin your future here!",
+  title: "EduShala | Build your future here!",
   description: "By EduShala",
 };
 
