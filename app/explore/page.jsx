@@ -8,10 +8,10 @@ export default function Explore() {
   const [query, setQuery] = useState('');
 
   const colleges = [
-    { id: 1, name: "ABC Engineering College", desc: "Top engineering institute with excellent placements.", img: "/assets/donald_university.jpg" },
-    { id: 2, name: "XYZ Medical College", desc: "Premier institute for MBBS & research.", img: "/assets/hovard.jpg" },
-    { id: 3, name: "LMN Business School", desc: "Renowned for MBA & entrepreneurship programs.", img: "/assets/savitri_college.jpg" },
-    { id: 4, name: "PQR Arts College", desc: "Known for liberal arts and humanities.", img: "" },
+    { id: 1, name: "Donald University", desc: "Top engineering institute with excellent placements.", img: "/assets/donald_university.jpg" },
+    { id: 2, name: "Hovard University", desc: "Premier institute for MBBS & research.", img: "/assets/hovard.jpg" },
+    { id: 3, name: "Savitri Bai College", desc: "Renowned for MBA & entrepreneurship programs.", img: "/assets/savitri_college.jpg" },
+    { id: 4, name: "Makalu Institute", desc: "Known for liberal arts and humanities.", img: "/assets/makalu.jpg" },
   ];
 
   const filteredColleges = colleges.filter(c =>
