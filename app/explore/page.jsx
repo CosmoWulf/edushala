@@ -1,9 +1,23 @@
 'use client';
-import Image from 'next/image';
 import Link from 'next/link';
+import Image from 'next/image';
+import { useState } from 'react';
 import '../../public/css/explore.css';
 
-export default function ExplorePage() {
+export default function Explore() {
+  const [query, setQuery] = useState('');
+
+  const colleges = [
+    { id: 1, name: "ABC Engineering College", desc: "Top engineering institute with excellent placements.", img: "" },
+    { id: 2, name: "XYZ Medical College", desc: "Premier institute for MBBS & research.", img: "" },
+    { id: 3, name: "LMN Business School", desc: "Renowned for MBA & entrepreneurship programs.", img: "" },
+    { id: 4, name: "PQR Arts College", desc: "Known for liberal arts and humanities.", img: "" },
+  ];
+
+  const filteredColleges = colleges.filter(c =>
+    c.name.toLowerCase().includes(query.toLowerCase())
+  );
+
   return (
     <>
       <nav>
@@ -13,17 +27,48 @@ export default function ExplorePage() {
         </div>
         <ul className="nav-links">
           <Link href="/"><li>Home</li></Link>
-          <Link href="/explore"><li id='explore'>Explore</li></Link>
+          <li><a href="#">How it Works</a></li>
+          <li><a href="#">Pricing</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
         <Link href="/login">
           <button className="login-btn">Login</button>
         </Link>
       </nav>
-      <section className="collage-explorer">
-        <div className="search-division">
-          <h1>Explore you dream college here right now! </h1>
+
+      {/* HERO-Section */}
+      <section className="explore-hero">
+        <h1>Find Your Dream College 🎓</h1>
+        <p>Browse thousands of colleges, compare courses & apply with ease.</p>
+        <div className="search-bar">
+          <input
+            type="text"
+            placeholder="Search for colleges..."
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+          />
+          <button className="primary-btn">Search</button>
         </div>
+      </section>
+
+      {/* COLLAGE'S InFo */}
+      <section className="college-grid">
+        {filteredColleges.length > 0 ? (
+          filteredColleges.map((college) => (
+            <div key={college.id} className="college-card">
+              {college.img ? (
+                <Image src={college.img} alt={college.name} width={280} height={160} />
+              ) : (
+                <div className="placeholder">No Image</div>
+              )}
+              <h3>{college.name}</h3>
+              <p>{college.desc}</p>
+              <button className="secondary-btn">View Details</button>
+            </div>
+          ))
+        ) : (
+          <p className="no-results">No colleges found matching your search.</p>
+        )}
       </section>
     </>
   );
