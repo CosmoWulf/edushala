@@ -143,13 +143,12 @@ nav {
     background: #ffb733;
 }
 
-/* COLLEGE GRID */
 .college-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 2rem;
     padding: 3rem 2rem;
-    background: #f9f9f9;
+    background: transparent;
     max-width: 1200px;
     margin: 0 auto;
 }

@@ -1,0 +1,82 @@
+.college-hero {
+    position: relative;
+    text-align: center;
+    height: 60vh;
+    overflow: hidden;
+}
+
+.college-hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.college-hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
+.college-hero-text h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    color: #ffa500;
+}
+
+.college-hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.college-hero-text .primary-btn {
+    background: #ffa500;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    color: black;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.college-details {
+    padding: 3rem 2rem;
+    max-width: 900px;
+    margin: auto;
+    line-height: 1.8;
+    color: #333;
+}
+
+.college-details h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #1E88E5;
+}
+
+.college-details h3 {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    color: #FF8C42;
+}
+
+.college-details ul {
+    margin-top: 1rem;
+    padding-left: 20px;
+}
+
+.college-details li {
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
