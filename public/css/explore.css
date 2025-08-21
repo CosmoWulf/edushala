@@ -43,6 +43,10 @@ nav {
     padding: 0;
 }
 
+.nav-links #glw-idx {
+    color: #1565C0;
+}
+
 .nav-links a {
     color: #333;
     text-decoration: none;
