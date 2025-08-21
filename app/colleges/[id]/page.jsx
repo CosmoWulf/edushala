@@ -19,7 +19,6 @@ export default function CollegeDetails() {
 
     return (
         <>
-            {/* NAVBAR */}
             <nav>
                 <div className="logo">
                     <h1 className="logo-text">edu</h1>

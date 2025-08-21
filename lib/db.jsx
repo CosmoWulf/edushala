@@ -7,6 +7,8 @@ import {
     createUserWithEmailAndPassword,
     signInWithEmailAndPassword,
     signOut,
+    EmailAuthProvider,
+    linkWithCredential
 } from "firebase/auth";
 
 const firebaseConfig = {
@@ -24,6 +26,7 @@ export const auth = getAuth(app);
 
 export const googleProvider = new GoogleAuthProvider();
 export const facebookProvider = new FacebookAuthProvider();
+
 export const signInWithGoogle = async () => {
     try {
         const result = await signInWithPopup(auth, googleProvider);
@@ -34,7 +37,6 @@ export const signInWithGoogle = async () => {
     }
 };
 
-// Facebook Sign-in
 export const signInWithFacebook = async () => {
     try {
         const result = await signInWithPopup(auth, facebookProvider);
@@ -45,7 +47,6 @@ export const signInWithFacebook = async () => {
     }
 };
 
-// Email/Password Sign-up
 export const signUpWithEmail = async (email, password) => {
     try {
         const result = await createUserWithEmailAndPassword(auth, email, password);
@@ -56,7 +57,6 @@ export const signUpWithEmail = async (email, password) => {
     }
 };
 
-// Email/Password Login
 export const loginWithEmail = async (email, password) => {
     try {
         const result = await signInWithEmailAndPassword(auth, email, password);
@@ -67,12 +67,30 @@ export const loginWithEmail = async (email, password) => {
     }
 };
 
-// Logout
 export const logout = async () => {
     try {
         await signOut(auth);
     } catch (error) {
         console.error("Logout Error:", error);
+        throw error;
+    }
+};
+
+// NEW: Link Google account with password
+export const linkGoogleWithPassword = async (email, password) => {
+    try {
+        const credential = EmailAuthProvider.credential(email, password);
+        const user = auth.currentUser;
+
+        if (user) {
+            const linkedUser = await linkWithCredential(user, credential);
+            console.log("Account linked successfully:", linkedUser);
+            return linkedUser.user;
+        } else {
+            throw new Error("No authenticated user found to link.");
+        }
+    } catch (error) {
+        console.error("Error linking account:", error);
         throw error;
     }
 };

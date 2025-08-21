@@ -8,7 +8,7 @@ export default function Explore() {
   const [query, setQuery] = useState('');
 
   const colleges = [
-    { id: "donald_university", name: "Donald University", desc: "Top engineering institute with excellent placements.", img: "/assets/donald_university.jpg" },
+    { id: "donald_university", name: "Donald University", desc: "Top engineering institute with excellent placements.", img: "/assets/donald_university.jpg", info: "" },
     { id: "hovard_uviversity", name: "Hovard University", desc: "Premier institute for MBBS & research.", img: "/assets/hovard.jpg" },
     { id: "savitri_college", name: "Savitri Bai College", desc: "Renowned for MBA & entrepreneurship programs.", img: "/assets/savitri_college.jpg" },
     { id: "makalu_inst", name: "Makalu Institute", desc: "Known for liberal arts and humanities.", img: "/assets/makalu.jpg" },
