@@ -67,7 +67,9 @@ export default function Explore() {
               )}
               <h3>{college.name}</h3>
               <p>{college.desc}</p>
+              <Link href={`/colleges/${college.id}`}>
               <button className="secondary-btn">View Details</button>
+              </Link>
             </div>
           ))
         ) : (
